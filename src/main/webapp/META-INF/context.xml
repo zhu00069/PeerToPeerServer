@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Context crossContext="true">
+
+	<Resource name="BeanManager" auth="Container"
+		type="javax.enterprise.inject.spi.BeanManager"
+		factory="org.jboss.weld.resources.ManagerObjectFactory" />
+	<Resource name="jdbc/P2PL_DB" auth="Container"
+		type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
+		url="jdbc:oracle:thin:@p2pl.cnb9hfak1br3.us-east-2.rds.amazonaws.com:1521:P2PL" username="p2plAdmin"
+		password="p2plAdmin" />
+	<Resource name="registeredUsers" value="..\webapp\WEB-INF\registeredApps.txt"></Resource>
+</Context>
