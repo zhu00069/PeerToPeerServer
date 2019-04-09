@@ -86,14 +86,10 @@ public class OperationDAOTest {
         List<Operation> operations = Collections.EMPTY_LIST;
         operations = new ArrayList<>(3);
         operations = operationDAO.readList();
-        
         for(int i = 0; i < operations.size(); i++){
-//            asserEquals(operations.get(i).getAmount(), new BigDecimal(100000.00));
-//            asserEquals(operations.get(i).getAmountRepaid(), new BigDecimal(10000.00));
-//            asserEquals(operations.get(i).getDueDate(), java.sql.Timestamp.valueOf("2019-03-25 00:00:00").toString());
-//            asserEquals(operations.get(i).getDuePenalty(), java.sql.Timestamp.valueOf("2019-03-25 00:00:00").toString());
-            
+            operations.add(operations.get(i));      
         }
+        assertEquals(operations.size(), 3);
         
   }
 
@@ -119,7 +115,7 @@ public class OperationDAOTest {
     @Test
     public void testCreate() {
        
-        
+        operation.setOperationID(1);
         operation.setAmount(new BigDecimal(20000.00));
         operation.setAmountRepaid(new BigDecimal(5000.00));
         operation.setDueDate(java.sql.Date.valueOf("2019-04-21").toString());

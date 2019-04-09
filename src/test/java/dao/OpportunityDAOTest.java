@@ -85,16 +85,13 @@ public class OpportunityDAOTest {
     @Test
     public void testReadList() {
         List<Opportunity> opportunities = Collections.EMPTY_LIST;
-        opportunities = new ArrayList<>(6);
+        opportunities = new ArrayList<>(62);
         opportunities = opportunityDAO.readList();
         
         for(int i = 0; i < opportunities.size(); i++){
-//            asserEquals(opportunities.get(i).getTitle(),);
-//            asserEquals(opportunities.get(i).getDescription(),);
-//            asserEquals(opportunities.get(i).getStatus(), );
-//            asserEquals(opportunities.get(i).getFundAmount(), );
-            
+            opportunities.add(opportunities.get(i));      
         }
+        assertEquals(opportunities.size(), 62);
         
     }
 

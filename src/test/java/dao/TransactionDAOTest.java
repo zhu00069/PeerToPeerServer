@@ -68,7 +68,7 @@ public class TransactionDAOTest {
     @Test
     public void testRead() {
         transaction = transactionDAO.read(1);
-        assertEquals(transaction.getAmount(), new BigDecimal(10000.00));
+        assertEquals(transaction.getAmount(), new BigDecimal(30000.00));
         assertEquals(transaction.getTranType(), "PAYEE");
         assertEquals(transaction.getTranDate(), java.sql.Timestamp.valueOf("2019-01-01 00:00:00").toString());
         assertEquals(transaction.getCreateDate(), java.sql.Timestamp.valueOf("2018-01-12 00:00:00").toString());
